@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">WGHelper</string>
+
+
+    <!--Login Activity -->
+    <string name="log_title">Bitte melden Sie sich an mit Ihrem Namen und der WGNummer, welche Sie von Ihrem WGLeiter erhalten haben!</string>
+    <string name="log_user">Nutzername</string>
+    <string name="log_wgschluessel">WGSchlüssel</string>
+    <string name="log_btn">Anmelden</string>
+    <string name="log_btn_new_WG">Neue WG registrieren</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="log_title_registration">Bitte erstellen Sie hier eine neue WG!</string>
+
+
+    <!--Registration activity-->
+    <string name="log_Teilnehmer">Wie viele Leute wohnen in Ihrer WG</string>
+    <string name="log_WGName">Geben Sie hier Ihrer WG einen Namen</string>
+    <string name="log_TnZahl">Teilnehmerzahl</string>
+    <string name="log_Name">WG_Name</string>
+    <string name="log_WgLeiter">Geben Sie hier Ihren Namen ein!</string>
+    <string name="log_NameLeiter">WGLeiter</string>
+
+
+
+
+
+
 </resources>
