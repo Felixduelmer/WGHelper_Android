@@ -60,10 +60,12 @@ public class MainActivity extends AppCompatActivity
 
 
         if (id == R.id.nav_kuelschrank) {
-            // Handle the camera action
+            FragmentKuehlschrank fragmentKuehlschrank = new FragmentKuehlschrank();
+            fragmentManager.beginTransaction().replace(R.id.container, fragmentKuehlschrank).commit();
+
         } else if (id == R.id.nav_kasse) {
-            /*FragmentKasse fragmentKasse = new FragmentKasse();
-            fragmentManager.beginTransaction().replace(R.id.container, fragmentKasse).commit();*/
+            FragmentKasse fragmentKasse = new FragmentKasse();
+            fragmentManager.beginTransaction().replace(R.id.container, fragmentKasse).commit();
 
         } else if (id == R.id.nav_gießme) {
 
