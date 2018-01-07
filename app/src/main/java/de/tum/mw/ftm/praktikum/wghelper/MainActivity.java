@@ -1,6 +1,7 @@
 package de.tum.mw.ftm.praktikum.wghelper;
 
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -68,12 +69,18 @@ public class MainActivity extends AppCompatActivity
             fragmentManager.beginTransaction().replace(R.id.container, fragmentKasse).commit();
 
         } else if (id == R.id.nav_gießme) {
+            FragmentGiessme fragmentGiessme = new FragmentGiessme();
+            fragmentManager.beginTransaction().replace(R.id.container, fragmentGiessme).commit();
 
         } else if (id == R.id.nav_trinkspiele) {
 
         } else if (id == R.id.nav_settings) {
+            /* FragmentSettings fragmentSettings = new FragmentSettings();
+            fragmentManager.beginTransaction().replace(R.id.container, fragmentSettings).commit(); */
 
         } else if (id == R.id.nav_logout) {
+            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(intent);
 
         }
 
