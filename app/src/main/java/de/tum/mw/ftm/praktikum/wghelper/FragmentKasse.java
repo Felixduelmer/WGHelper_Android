@@ -34,6 +34,7 @@ public class FragmentKasse extends Fragment {
 
     private static final String SALDO_URL = "http://pr-android.ftm.mw.tum.de/android/wghelper/saldo.php";
     private Button kasse_btn;
+    private Button kasse_btn2;
     private EditText kasse_wert;
     private String wert;
     private Bewohner bewohner;
@@ -50,6 +51,7 @@ public class FragmentKasse extends Fragment {
 
         kasse_btn = (Button) view.findViewById(R.id.kasse_btn);
         kasse_wert = (EditText) view.findViewById(R.id.kasse_wert);
+        kasse_btn2 = (Button) view.findViewById(R.id.kontostand_btn);
 
         kasse_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,9 +62,22 @@ public class FragmentKasse extends Fragment {
                     new NewSaldo().execute(SALDO_URL, wert, "1", "4");
                 }
 
+                Intent intent = new Intent(getActivity(), Saldo.class);
+                startActivity(intent);
+
 
             }
         });
+
+        kasse_btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), Saldo.class);
+                startActivity(intent);
+            }
+                                      }
+
+            );
 
 
         return view;

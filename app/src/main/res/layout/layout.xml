@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+     android:orientation="vertical"
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+
+     >
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/zurueck"
+        android:textSize="20sp"
+        android:text="Zurück Bitches!"/>
+    <ScrollView
+        android:id="@+id/ScrollView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+	<TableLayout
+        android:id="@+id/TableLayout01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0">
+
+     <TableRow
+         android:id="@+id/TableRow01"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content">
+     <TextView
+         android:id="@+id/TextView01"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Name"
+         android:textSize="20sp"></TextView>
+
+     <TextView
+         android:id="@+id/TextView02"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="Kontostand"
+         android:textSize="20sp"></TextView>
+     </TableRow>
+
+	</TableLayout>
+    	</ScrollView>
+    </LinearLayout>
