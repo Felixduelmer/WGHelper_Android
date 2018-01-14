@@ -16,4 +16,7 @@
     <string name="nav_drawer_logout">Ausziehen</string>
     <string name="nav_drawer_settings">Einstellungen</string>
 
+    <string name="kasse_wert">Wieviel Geld hast du ausgegeben?</string>
+    <string name="kasse_btn">Aktualisieren</string>
+
 </resources>
