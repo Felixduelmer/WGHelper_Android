@@ -73,6 +73,8 @@ public class MainActivity extends AppCompatActivity
             fragmentManager.beginTransaction().replace(R.id.container, fragmentGiessme).commit();
 
         } else if (id == R.id.nav_trinkspiele) {
+            FragmentTrinkspiele fragmentTrinkspiele = new FragmentTrinkspiele();
+            fragmentManager.beginTransaction().replace(R.id.container, fragmentTrinkspiele).commit();
 
         } else if (id == R.id.nav_settings) {
             /* FragmentSettings fragmentSettings = new FragmentSettings();

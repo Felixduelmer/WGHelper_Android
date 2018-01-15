@@ -1,5 +1,6 @@
 package de.tum.mw.ftm.praktikum.wghelper;
 
+import android.app.Dialog;
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -11,6 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -35,6 +38,7 @@ public class FragmentKasse extends Fragment {
     private static final String SALDO_URL = "http://pr-android.ftm.mw.tum.de/android/wghelper/saldo.php";
     private Button kasse_btn;
     private Button kasse_btn2;
+    private Button hilfe_btn;
     private EditText kasse_wert;
     private String wert;
     private Bewohner bewohner;
@@ -52,6 +56,7 @@ public class FragmentKasse extends Fragment {
         kasse_btn = (Button) view.findViewById(R.id.kasse_btn);
         kasse_wert = (EditText) view.findViewById(R.id.kasse_wert);
         kasse_btn2 = (Button) view.findViewById(R.id.kontostand_btn);
+        hilfe_btn = (Button) view.findViewById(R.id.hilfe_btn);
 
         kasse_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,8 +84,46 @@ public class FragmentKasse extends Fragment {
 
             );
 
+        hilfe_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                final Dialog dialog = new Dialog(getActivity());
+
+                //setting custom layout to dialog
+                dialog.setContentView(R.layout.dialog);
+                dialog.setTitle("Custom Dialog");
+
+                //adding text dynamically
+                TextView txt = (TextView) dialog.findViewById(R.id.textView);
+                txt.setText("Gebe hier bitte den Betrag in Euro ein. " +
+                        "Ein Einkauf von < 10,99€ > gibst du als < 10.99 > ein. Die App speichert alle Ausgaben" +
+                        " und du kannst unter Kontostände eine Übersicht einsehen. ");
+
+                ImageView image = (ImageView)dialog.findViewById(R.id.image);
+                image.setImageDrawable(getResources().getDrawable(android.R.drawable.ic_dialog_info));
+
+                //adding button click event
+                Button dismissButton = (Button) dialog.findViewById(R.id.button);
+                dismissButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+                dialog.show();
+
+
+
+
+            }
+        });
+
 
         return view;
+
+
+
     }
 
     public class NewSaldo extends AsyncTask<String, Void, JSONObject> {

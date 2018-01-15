@@ -20,6 +20,7 @@
             android:layout_margin="20dp"
             android:hint="@string/kasse_wert"
             android:inputType="text"
+            android:autofillHints="€"
             android:textAlignment="center"/>
 
         <Button
@@ -34,12 +35,21 @@
 
         <Button
             android:id="@+id/kontostand_btn"
-            android:layout_width="wrap_content"
+            android:layout_width="262dp"
             android:layout_height="wrap_content"
             android:text="@string/kasse_btn2"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:layout_margin="10dp"
             android:layout_gravity="center" />
+
+        <Button
+            android:id="@+id/hilfe_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:text="Hilfe"
+            android:textSize="10sp" />
 
 
 
