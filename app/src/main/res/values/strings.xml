@@ -21,8 +21,21 @@
     <string name="log_NameLeiter">WGLeiter</string>
 
 
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 
+    <string name="action_settings">Settings</string>
 
+    <string name="username">Fabi</string>
 
+    <string name="nav_drawer_kuehlschrank">Kühlschrank</string>
+    <string name="nav_drawer_kasse">Kasse</string>
+    <string name="nav_drawer_gießme">GießMe</string>
+    <string name="nav_drawer_trinkspiele">Trinkspiele</string>
+    <string name="nav_drawer_logout">Ausziehen</string>
+    <string name="nav_drawer_settings">Einstellungen</string>
 
+    <string name="kasse_wert">Wieviel Geld hast du ausgegeben?</string>
+    <string name="kasse_btn">Aktualisieren</string>
+    <string name="kasse_btn2">Kontostände</string>
 </resources>

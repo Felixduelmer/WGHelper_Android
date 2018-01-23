@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+     android:orientation="vertical"
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+
+     >
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/zurueck"
+        android:textSize="20sp"
+        android:text="Zurück Bitches!"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textSize="20sp"
+        android:text="Übersicht wer bisher wieviel beim Einkaufen ausgegeben hat"
+        android:textStyle="normal"
+        android:layout_marginLeft="20dp"></TextView>
+    <ScrollView
+        android:id="@+id/ScrollView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="20dp">
+	<TableLayout
+        android:id="@+id/TableLayout01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0">
+
+     <TableRow
+         android:id="@+id/TableRow01"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:minHeight="30dp">
+
+         <TextView
+             android:id="@+id/TextView01"
+             android:layout_width="194dp"
+             android:layout_height="wrap_content"
+             android:text="Name"
+             android:textSize="20sp"
+             android:textStyle="bold"
+             android:layout_marginLeft="0dp"></TextView>
+
+         <TextView
+             android:id="@+id/TextView02"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:text="Kontostand in €               "
+             android:textSize="20sp"
+             android:textStyle="bold"></TextView>
+     </TableRow>
+
+	</TableLayout>
+    	</ScrollView>
+    </LinearLayout>

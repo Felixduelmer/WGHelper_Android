@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_kuelschrank"
+            android:icon="@drawable/ic_kuehlschrank2"
+            android:title="@string/nav_drawer_kuehlschrank" />
+        <item
+            android:id="@+id/nav_kasse"
+            android:icon="@drawable/ic_kasse2"
+            android:title="@string/nav_drawer_kasse" />
+        <item
+            android:id="@+id/nav_gießme"
+            android:icon="@drawable/ic_giessme"
+            android:title="@string/nav_drawer_gießme" />
+        <item
+            android:id="@+id/nav_trinkspiele"
+            android:icon="@drawable/ic_trinkspiele"
+            android:title="@string/nav_drawer_trinkspiele" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/nav_drawer_settings" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_ausziehen2"
+            android:title="@string/nav_drawer_logout" />
+    </group>
+
+</menu>

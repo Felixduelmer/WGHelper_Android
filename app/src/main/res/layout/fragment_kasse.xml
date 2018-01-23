@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hallo! Hier kannst du nach dem Einkaufen den ausgegeben Betrag eingeben:"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/kasse_wert"
+            android:layout_width="329dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:hint="@string/kasse_wert"
+            android:inputType="text"
+            android:autofillHints="€"
+            android:textAlignment="center"/>
+
+        <Button
+            android:id="@+id/kasse_btn"
+            android:layout_width="262dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:elevation="0dp"
+            android:text="@string/kasse_btn"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/kontostand_btn"
+            android:layout_width="262dp"
+            android:layout_height="wrap_content"
+            android:text="@string/kasse_btn2"
+            android:textSize="20sp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center" />
+
+        <Button
+            android:id="@+id/hilfe_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:text="Hilfe"
+            android:textSize="10sp" />
+
+
+
+    </LinearLayout>
+</FrameLayout>
