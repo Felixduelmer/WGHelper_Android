@@ -26,16 +26,24 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorPrimary"
                 android:padding="10dp"
-                android:layout_margin="20dp"
+                android:layout_margin="10dp"
                 />
             <EditText
-                android:id="@+id/log_wgschluessel"
-                android:hint="WGSchlüssel"
+                android:id="@+id/log_wg_id"
+                android:hint="@string/log_wg_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorPrimary"
                 android:padding="10dp"
-                android:layout_margin="20dp"
+                android:layout_margin="10dp"/>
+            <EditText
+                android:id="@+id/log_wgschluessel"
+                android:hint="@string/log_wgpasswort"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:padding="10dp"
+                android:layout_margin="10dp"
                 />
             <Button
                 android:id="@+id/log_btn"
