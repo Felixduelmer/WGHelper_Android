@@ -2,6 +2,7 @@
     <string name="app_name">WGHelper</string>
 
 
+
     <!--Login Activity -->
     <string name="log_title">Bitte melden Sie sich an mit Ihrem eigenem Namen sowie dem Passwort und der WG_ID, welche Sie von Ihrem WGLeiter erhalten haben!</string>
     <string name="log_user">Nutzername</string>
@@ -17,6 +18,7 @@
     <string name="log_Teilnehmer">Wie viele Leute wohnen in Ihrer WG?</string>
     <string name="log_WGName">Wie soll Ihre WG heißen?</string>
     <string name="log_Passwort">Welches Passwort soll Ihre WG haben?</string>
+    <string name="Passwort">Passwort</string>
 
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -24,7 +26,9 @@
 
     <string name="action_settings">Settings</string>
 
-    <string name="username">Fabi</string>
+    <string name="header_subname">android.studio@android.com</string>
+        <string name="header_subsubname">WGID</string>
+    <integer name="header_subsubsubname">1</integer>
 
     <string name="nav_drawer_kuehlschrank">Kühlschrank</string>
     <string name="nav_drawer_kasse">Kasse</string>
@@ -36,4 +40,16 @@
     <string name="kasse_wert">Wieviel Geld hast du ausgegeben?</string>
     <string name="kasse_btn">Aktualisieren</string>
     <string name="kasse_btn2">Kontostände</string>
+
+    <!--Kühlschrank activity-->
+    <string name="refrig_refresh">Aktualisieren!</string>
+    <string name="refrig_hint">Essen</string>
+    <string name="refrig_existing">Vorhanden</string>
+    <string name="refrig_needed">Nicht Vorhanden</string>
+    <string name="refrig_change">Ändern</string>
+
+    <!--POP-UP-Kühlschrank-->
+    <string name="Pop_header">Bitte geben Sie das benötigte Lebensmittel ein:</string>
+    <string name="Pop_vorhanden">Ist das Lebensmittel vorhanden?</string>
+    <string name="Pop_new">Hinzufügen</string>
 </resources>

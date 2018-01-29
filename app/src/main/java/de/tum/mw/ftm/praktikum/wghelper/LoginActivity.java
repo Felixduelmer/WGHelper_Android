@@ -34,15 +34,19 @@ public class LoginActivity extends AppCompatActivity {
     public static final String PREFGROUP_USER = "de.tum.mw.ftm.praktikum.android.wghelper.PREFGROUP_USER";
     public static final String IS_REGISTERED = "de.tum.mw.ftm.praktikum.android.wghelper.IS_REGISTERED";
     public static final String USERNAME = "de.tum.mw.ftm.praktikum.android.wghelper.USERNAME";
-    public static final String USERID = "de.tum.mw.ftm.praktikum.USERID";
-    public static final String EMAIL = "de.tum.mw.ftm.praktikum.EMAIL";
-    public static final String IS_LOGGED_IN = "de.tum.mw.ftm.praktikum.IS_LOGGED_IN";
+    public static final String PASSWORT = "de.tum.mw.ftm.praktikum.android.wghelper.PASSWORT";
+    public static final String PASSWORTVOR = "de.tum.mw.ftm.praktikum.android.wghelper.PASSWORTVOR";
+    public static final String WGID = "de.tum.mw.ftm.praktikum.android.wghelper.WGID";
+    public static final String USERID = "de.tum.mw.ftm.praktikum.android.wghelper.USERID";
+    public static final String IS_LOGGED_IN = "de.tum.mw.ftm.praktikum.android.wghelper.IS_LOGGED_IN";
     private static final String LOGIN_URL = "http://pr-android.ftm.mw.tum.de/android/wghelper/login.php";
 
     private Button btnRegister;
     private Button btnLogin;
     private EditText username, wgpasswort, wg_id;
     private static long backpressed=0;
+    String passwort = "hallo", nice = "haha";
+
 
     @Override
     public void onBackPressed() {
@@ -61,10 +65,10 @@ public class LoginActivity extends AppCompatActivity {
 
 
         //Gleich MainActivity starten wenn User noch eingeloggt
-       /* if (getSharedPreferences(PREFGROUP_USER, MODE_PRIVATE).getBoolean(IS_LOGGED_IN, false)) {
+        if (getSharedPreferences(PREFGROUP_USER, MODE_PRIVATE).getBoolean(IS_LOGGED_IN, false)) {
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(intent);
-        }*/
+        }
 
 
         super.onCreate(savedInstanceState);
@@ -81,8 +85,8 @@ public class LoginActivity extends AppCompatActivity {
         //OnClickListener setzen um auf Click Events reagieren zu können
 
         if (getSharedPreferences(PREFGROUP_WG, MODE_PRIVATE).getBoolean(IS_REGISTERED, false)) {
-            wg_id.setText(bundle.getInt("WG_ID"));
-            wgpasswort.setText(bundle.getString("Passwort"));
+                wgpasswort.setText(getSharedPreferences(PREFGROUP_WG, MODE_PRIVATE).getString(PASSWORTVOR, nice));
+                wg_id.setText(getSharedPreferences(PREFGROUP_WG, MODE_PRIVATE).getString(WGID, passwort));
         }
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
@@ -99,6 +103,7 @@ public class LoginActivity extends AppCompatActivity {
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent intent = new Intent(LoginActivity.this, RegistrationActivity.class);
                 startActivity(intent);
             }
@@ -109,8 +114,9 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     //Speichert Nutzerdaten als SharedPreferences ab
-        public void login(long id, String username) {
+        public void login(long id, String username, long wgid) {
             SharedPreferences.Editor editor = getApplicationContext().getSharedPreferences(PREFGROUP_USER, MODE_PRIVATE).edit();
+            editor.putLong(WGID, wgid).apply();
             editor.putLong(USERID, id).apply();
             editor.putString(USERNAME, username).apply();
             editor.putBoolean(IS_LOGGED_IN, true).apply();
@@ -167,7 +173,7 @@ public class LoginActivity extends AppCompatActivity {
             if(jsonObject != null){
                 try {
                     if (jsonObject.getBoolean("success")) {
-                        login(jsonObject.getLong("bewohnerid"), jsonObject.getString("username"));
+                        login(jsonObject.getLong("bewohnerid"), jsonObject.getString("username"), jsonObject.getLong("wgid"));
                     } else {
                         Toast.makeText(getApplicationContext(), "Login nicht erfolgreich", Toast.LENGTH_LONG).show();
 

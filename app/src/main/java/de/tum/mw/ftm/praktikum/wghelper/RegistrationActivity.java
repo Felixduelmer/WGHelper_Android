@@ -138,7 +138,10 @@ public class RegistrationActivity extends AppCompatActivity {
 
                             i.putExtra("WG", jsonObject.getString("WG"));
                             SharedPreferences.Editor editor = getApplicationContext().getSharedPreferences(LoginActivity.PREFGROUP_WG,MODE_PRIVATE).edit();
-                            editor.putBoolean(LoginActivity.IS_REGISTERED, true);
+                            editor.putBoolean(LoginActivity.IS_REGISTERED, true).apply();
+                            String str = jsonObject.getString("passwort");
+                            editor.putString(LoginActivity.PASSWORTVOR, str).apply();
+                            editor.putString(LoginActivity.WGID, jsonObject.getString("wgid")).apply();
                             startActivity(i);
 
                         } catch (JSONException e) {
