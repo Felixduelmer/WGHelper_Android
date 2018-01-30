@@ -25,12 +25,16 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
+import static de.tum.mw.ftm.praktikum.wghelper.LoginActivity.strwgpasswort;
+import static de.tum.mw.ftm.praktikum.wghelper.MainActivity.WG_ID_STR;
+
 
 public class FragmentSettings extends PreferenceFragment {
     public static final String MITGLIEDER_URL= "http://pr-android.ftm.mw.tum.de/android/wghelper/Mitgliederauslesen.php";
     private List<Bewohner> list = new ArrayList<Bewohner>();
     private BewohnerAdapter bewohnerAdapter;
     private ListView mitgliederlist;
+    private TextView passwortview;
 
 
 
@@ -39,10 +43,13 @@ public class FragmentSettings extends PreferenceFragment {
         View view;
         view = inflater.inflate(R.layout.fragment_settings, container, false);
 
-        new getMember().execute(MITGLIEDER_URL,"1");
+        new getMember().execute(MITGLIEDER_URL,WG_ID_STR);
         mitgliederlist = (ListView) view.findViewById(R.id.Mitglieder);
         bewohnerAdapter = new BewohnerAdapter(getActivity(), R.layout.bewohneradapter, list);
         mitgliederlist.setAdapter(bewohnerAdapter);
+        passwortview = (TextView) view.findViewById(R.id.PW);
+
+        passwortview.setText(strwgpasswort);
 
 
 
