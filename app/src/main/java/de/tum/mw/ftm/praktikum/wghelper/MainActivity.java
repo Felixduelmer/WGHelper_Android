@@ -75,8 +75,8 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_trinkspiele) {
 
         } else if (id == R.id.nav_settings) {
-            /* FragmentSettings fragmentSettings = new FragmentSettings();
-            fragmentManager.beginTransaction().replace(R.id.container, fragmentSettings).commit(); */
+            FragmentSettings fragmentSettings = new FragmentSettings();
+            fragmentManager.beginTransaction().replace(R.id.container, fragmentSettings).commit();
 
         } else if (id == R.id.nav_logout) {
             Intent intent = new Intent(MainActivity.this, LoginActivity.class);

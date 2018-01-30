@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TEST Gießme"/>
+            android:text="Wasserstand"
+            android:layout_margin="10dp"
+            android:textSize="40sp"
+            android:layout_gravity="center"/>
+        <ListView
+            android:id="@+id/plantid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"/>
+        <Button
+                android:id="@+id/button"
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+
+        <Button
+            android:id="@+id/hzfg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/giessme_btn_new_flower"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:layout_margin="10dp" />
 
     </LinearLayout>
 

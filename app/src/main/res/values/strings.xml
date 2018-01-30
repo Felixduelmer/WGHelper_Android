@@ -15,5 +15,18 @@
     <string name="nav_drawer_trinkspiele">Trinkspiele</string>
     <string name="nav_drawer_logout">Ausziehen</string>
     <string name="nav_drawer_settings">Einstellungen</string>
-
+    <string name="set_group_common">Allgemeine Einstellungen</string>
+    <string name="set_group_delete">Mitglieder entfernen</string>
+    <string name="set_group_number">Mitgliederzahl ändern</string>
+    <string name="set_mitglieder">Aktuelle Mitglieder</string>
+    <string name="blume1">Palmlilie</string>
+    <string name="giessme_btn_new_flower"> + Hinzufügen</string>
+    <string name="hzfg_title">Neue Pflanze hinzufügen</string>
+    <string name="hzfg_art">Welche Pflanze wird hinzugefügt?</string>
+    <string name="hzfg_room">In welchem Zimmer steht die Pflanze?</string>
+    <string name="hzfg_wg">Hinzufügen</string>
+    <string name="set_group_delete_list">Wen möchten Sie entfernen?</string>
+    <string name="set_group_number_question">Wählen Sie die Anzahl an Mitgliedern</string>
+    <string name="water_dialog_titel">A Glas Wasser wär it schlecht!</string>
+    <string name="water_dialog_ok">OK</string>
 </resources>
