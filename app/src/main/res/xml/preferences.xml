@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/set_group_common">
+
+
+        <ListPreference
+            android:title="@string/set_group_delete"
+            android:dialogTitle="Wen möchten Sie entfernen?"
+            android:entries="@array/Mitglieder"
+            android:entryValues="@array/Mitglieder"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

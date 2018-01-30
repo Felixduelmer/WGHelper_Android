@@ -97,8 +97,8 @@ public class MainActivity extends AppCompatActivity
             fragmentManager.beginTransaction().replace(R.id.container, fragmentTrinkspiele).commit();
 
         } else if (id == R.id.nav_settings) {
-            /* FragmentSettings fragmentSettings = new FragmentSettings();
-            fragmentManager.beginTransaction().replace(R.id.container, fragmentSettings).commit(); */
+            FragmentSettings fragmentSettings = new FragmentSettings();
+            fragmentManager.beginTransaction().replace(R.id.container, fragmentSettings).commit();
 
         } else if (id == R.id.nav_logout) {
             SharedPreferences.Editor editor = getApplicationContext().getSharedPreferences(LoginActivity.PREFGROUP_USER, MODE_PRIVATE).edit();
