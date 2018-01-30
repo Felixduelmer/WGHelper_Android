@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:layout_centerHorizontal="true" android:id="@+id/secondcontainer">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="@string/Pop_header"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/pop_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <CheckBox
+            android:id="@+id/pop_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Pop_vorhanden"
+            android:layout_gravity="center"
+            android:onClick="onCheckboxClicked"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/btn_newfood"
+            android:text="@string/Pop_new"/>
+        </LinearLayout>
+
+
+
+
+</RelativeLayout>
