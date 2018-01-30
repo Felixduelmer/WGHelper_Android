@@ -41,6 +41,7 @@ public class LoginActivity extends AppCompatActivity {
     public static final String USERID = "de.tum.mw.ftm.praktikum.android.wghelper.USERID";
     public static final String IS_LOGGED_IN = "de.tum.mw.ftm.praktikum.android.wghelper.IS_LOGGED_IN";
     private static final String LOGIN_URL = "http://pr-android.ftm.mw.tum.de/android/wghelper/login.php";
+    public static String strwgpasswort;
 
     private Button btnRegister;
     private Button btnLogin;
@@ -94,7 +95,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String strUsername = username.getText().toString();
-                String strwgpasswort = wgpasswort.getText().toString();
+                strwgpasswort = wgpasswort.getText().toString();
                 String strwgid = wg_id.getText().toString();
                 if(!strwgpasswort.isEmpty() && !strUsername.isEmpty() && !strwgid.isEmpty()){
                     new LoginTask().execute(LOGIN_URL, strUsername, strwgid, strwgpasswort);

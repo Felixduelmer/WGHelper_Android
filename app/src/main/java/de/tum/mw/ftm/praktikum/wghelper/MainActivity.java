@@ -20,6 +20,7 @@ import android.widget.TextView;
 
 import static de.tum.mw.ftm.praktikum.wghelper.LoginActivity.USERID;
 import static de.tum.mw.ftm.praktikum.wghelper.LoginActivity.WGID;
+import static de.tum.mw.ftm.praktikum.wghelper.LoginActivity.strwgpasswort;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -37,7 +38,6 @@ public class MainActivity extends AppCompatActivity
         if (savedInstanceState == null) {
             getFragmentManager().beginTransaction()
                 .add(R.id.container, new FragmentKuehlschrank()).commit(); }
-
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
