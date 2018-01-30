@@ -1,5 +1,8 @@
 package de.tum.mw.ftm.praktikum.wghelper;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 /**
  * Created by fabischramm on 13.01.18.
  */
@@ -10,11 +13,19 @@ public class Bewohner {
     private int Saldo;
     private String name;
 
-    public Bewohner(int ID, int bewohner_ID, int saldo, String name) {
-        this.ID = ID;
-        Bewohner_ID = bewohner_ID;
-        Saldo = saldo;
-        this.name = name;
+    public Bewohner(JSONObject object) {
+
+        try {
+            this.ID = object.getInt("ID");
+            this.Bewohner_ID = object.getInt("ID_Bewohner");
+            this.Saldo = object.getInt("Saldo");
+            this.name = object.getString("Name");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+
+
     }
 
     public int getID() {

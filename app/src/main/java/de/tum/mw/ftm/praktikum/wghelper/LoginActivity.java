@@ -22,6 +22,7 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.util.Objects;
 
 /**
  * Created by felix on 14.12.2017.
@@ -114,10 +115,10 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     //Speichert Nutzerdaten als SharedPreferences ab
-        public void login(long id, String username, long wgid) {
+        public void login(String id, String username, String wgid) {
             SharedPreferences.Editor editor = getApplicationContext().getSharedPreferences(PREFGROUP_USER, MODE_PRIVATE).edit();
-            editor.putLong(WGID, wgid).apply();
-            editor.putLong(USERID, id).apply();
+            editor.putString(WGID, wgid).apply();
+            editor.putString(USERID, id).apply();
             editor.putString(USERNAME, username).apply();
             editor.putBoolean(IS_LOGGED_IN, true).apply();
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
@@ -173,7 +174,7 @@ public class LoginActivity extends AppCompatActivity {
             if(jsonObject != null){
                 try {
                     if (jsonObject.getBoolean("success")) {
-                        login(jsonObject.getLong("bewohnerid"), jsonObject.getString("username"), jsonObject.getLong("wgid"));
+                        login(jsonObject.getString("bewohnerid"), jsonObject.getString("username"), jsonObject.getString("wgid"));
                     } else {
                         Toast.makeText(getApplicationContext(), "Login nicht erfolgreich", Toast.LENGTH_LONG).show();
 

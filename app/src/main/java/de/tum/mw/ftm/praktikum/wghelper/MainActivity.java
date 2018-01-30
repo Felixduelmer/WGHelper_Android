@@ -18,11 +18,16 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import static de.tum.mw.ftm.praktikum.wghelper.LoginActivity.USERID;
+import static de.tum.mw.ftm.praktikum.wghelper.LoginActivity.WGID;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     FragmentManager fragmentManager;
-    TextView userName, WGID;
+    TextView userName, WGIDView;
+    public static String WG_ID_STR;
+    public static String BENUTZER_ID_STR;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,10 +53,13 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         userName = (TextView)navigationView.getHeaderView(0).findViewById(R.id.nav_header_username);
-        WGID = (TextView)navigationView.getHeaderView(0).findViewById(R.id.nav_header_wgid);
+        WGIDView = (TextView)navigationView.getHeaderView(0).findViewById(R.id.nav_header_wgid);
         SharedPreferences prefs = getSharedPreferences(LoginActivity.PREFGROUP_USER, Context.MODE_PRIVATE);
-        userName.setText(prefs.getString(LoginActivity.USERNAME, getResources().getString(R.string.header_subname)));
-        //WGID.setText(prefs.getLong(LoginActivity.WGID, getResources().getInteger(R.id.));
+        userName.setText("Hallo "+prefs.getString(LoginActivity.USERNAME, getResources().getString(R.string.header_subname)));
+        //WGID.setText(prefs.getString(LoginActivity.WGID, getResources().getString(R.string.header_subsubname)));
+        WG_ID_STR = getSharedPreferences(LoginActivity.PREFGROUP_USER, MODE_PRIVATE).getString(WGID, "null");
+        BENUTZER_ID_STR = getSharedPreferences(LoginActivity.PREFGROUP_USER, MODE_PRIVATE).getString(USERID, "null");
+        WGIDView.setText("Deine WG-ID lautet: "+WG_ID_STR);
     }
 
     @Override
